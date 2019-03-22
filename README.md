@@ -615,7 +615,7 @@ In my case I already use a domain name on my server, so I can head over and crea
 
 
 ```bash
-kubectl create secret tls my-tls-secret --key /etc/letsencrypt/my.domain.com/privkey.pem --cert /etc/letsencrypt/my.domain.com/fullchain.pem
+kubectl create secret tls my-tls-secret --key /etc/letsencrypt/live/my.domain.com/privkey.pem --cert /etc/letsencrypt/live/my.domain.com/fullchain.pem
 ```
 
 Now that we made our cluster aware of the existence of the TLS certificate, we can add it to our NGINX Ingress configuration file:
